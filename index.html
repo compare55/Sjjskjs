@@ -1,560 +1,176 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#ff416c"><title>Compare_X Rank</title><style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f5f6fa;color:#1f2430;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.app-shell{max-width:520px;margin:0 auto;min-height:100vh;background:#f5f6fa;padding-bottom:86px}.topbar{height:66px;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;background:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid #ececf2}.brand{display:flex;align-items:center;gap:10px}.brand .logo,.brand-mark,.profile-avatar{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#ff416c,#ff7a4d);color:#fff;display:grid;place-items:center;font-weight:900;box-shadow:0 7px 18px rgba(255,65,108,.25)}.brand strong{display:block;font-size:16px;letter-spacing:.2px}.brand small{display:block;color:#9b9eaa;font-size:9px;letter-spacing:2px;font-weight:800}.music-pill{border:0;background:#fff3f6;color:#ef4268;border-radius:20px;padding:9px 13px;font-weight:800;font-size:11px}.page{display:none;padding:14px}.active-page{display:block}.hero-card{margin-top:4px;border-radius:22px;padding:22px;color:#fff;background:linear-gradient(135deg,#ff416c 0%,#ff6a4d 100%);display:flex;justify-content:space-between;gap:12px;box-shadow:0 14px 30px rgba(255,65,108,.2)}.eyebrow,.section-kicker{font-size:10px;letter-spacing:1.7px;font-weight:900;color:#a3a5b0}.hero-card .eyebrow{color:rgba(255,255,255,.75)}h1{margin:4px 0;font-size:24px;line-height:1.15}h2{margin:3px 0;font-size:18px}.hero-card p{margin:8px 0 0;color:rgba(255,255,255,.86);font-size:12px}.hero-badge{align-self:flex-start;background:rgba(255,255,255,.2);padding:7px 9px;border-radius:20px;font-size:10px;font-weight:900}.wallet-card{background:#202533;color:#fff;border-radius:20px;padding:18px;margin-top:12px;box-shadow:0 12px 28px rgba(32,37,51,.15)}.wallet-card.large{padding:24px}.wallet-top{display:flex;justify-content:space-between;color:#aeb2c0;font-size:10px}.balance{font-size:31px;font-weight:900;margin:7px 0}.user-mini{display:flex;justify-content:space-between;color:#c3c6d0;font-size:11px;padding-bottom:13px}.wallet-actions{display:flex;gap:9px}.wallet-btn{flex:1;border:0;border-radius:12px;padding:11px 8px;font-weight:900;font-size:11px}.wallet-btn.add{background:#ff416c;color:#fff}.wallet-btn.withdraw{background:#303646;color:#fff}.section-head{display:flex;align-items:end;justify-content:space-between;margin:18px 2px 10px}.section-head h2{font-size:19px}.timer-chip{min-width:58px;text-align:center;background:#fff;border:1px solid #ececf2;color:#ff416c;padding:8px 10px;border-radius:12px;font-weight:900}.game-card,.result-card,.empty-card,.profile-card,.info-list{background:#fff;border-radius:20px;padding:17px;box-shadow:0 8px 24px rgba(30,33,45,.06);margin-bottom:12px}.round-title{display:flex;justify-content:space-between;font-size:11px;font-weight:900;color:#555a68;margin-bottom:15px}.live-dot{color:#ff416c}.choice-label{font-size:12px;font-weight:900;margin:13px 0 9px}.choice-label span{float:right;color:#a0a3ae;font-size:10px}.color-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.color-choice{border:0;color:#fff;padding:12px 5px;border-radius:12px;font-weight:900}.green{background:#28c76f}.red{background:#ff416c}.violet{background:#8e5cf6}.number-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}.num-btn{border:1px solid #ececf2;background:#fff;padding:11px 0;border-radius:11px;font-weight:900;color:#343847}.num-btn.n0,.num-btn.n2,.num-btn.n4,.num-btn.n6,.num-btn.n8{color:#ff416c;border-color:#ffd0da;background:#fff7f9}.num-btn.n1,.num-btn.n3,.num-btn.n5,.num-btn.n7,.num-btn.n9{color:#28c76f;border-color:#c9f2dc;background:#f5fff9}.num-btn.n0{background:linear-gradient(135deg,#fff7f9 0%,#f6efff 100%);color:#8e5cf6;border-color:#dccfff}.num-btn.n5{background:linear-gradient(135deg,#f5fff9 0%,#f6efff 100%);color:#8e5cf6;border-color:#dccfff}.winning-number{font-weight:900;padding:5px 10px;border-radius:20px;background:#f3f4f7}.winning-number.red-number{color:#ff416c;background:#fff0f3}.winning-number.green-number{color:#28c76f;background:#edfff5}.winning-number.violet-number{color:#8e5cf6;background:#f3edff}.num-btn:active,.color-choice:active{transform:scale(.97)}.input-group{margin-top:12px}.input-group label{display:block;font-size:10px;font-weight:900;color:#777b88;margin-bottom:6px}.input-group input{width:100%;border:1px solid #e5e6ec;background:#fafbfc;border-radius:11px;padding:12px;outline:none;font-size:13px;color:#222}.input-group input:focus{border-color:#ff6a86}.primary-btn,.secondary-btn{border:0;border-radius:12px;padding:13px;font-weight:900;font-size:11px;cursor:pointer}.primary-btn{background:linear-gradient(135deg,#ff416c,#ff704d);color:#fff;box-shadow:0 8px 18px rgba(255,65,108,.18)}.secondary-btn{background:#202533;color:#fff}.wide{width:100%;margin-top:11px}.selected{text-align:center;font-size:11px;color:#28a66a;font-weight:900;padding:8px}.message{text-align:center;font-size:11px;color:#6c7180;min-height:15px}.result-card h3{margin:3px 0 12px}.result-row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid #f0f0f4;font-size:12px}.result-row:last-child{border-bottom:0}.res-badge{padding:5px 10px;border-radius:20px;background:#ececf2}.bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(520px,100%);height:70px;background:rgba(255,255,255,.97);border-top:1px solid #ececf2;display:grid;grid-template-columns:repeat(6,1fr);z-index:30;padding-bottom:env(safe-area-inset-bottom)}.nav-item{border:0;background:none;color:#9da1ad;font-size:10px;font-weight:800;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}.nav-item span{font-size:20px;line-height:18px}.nav-item.active{color:#ff416c}.nav-item.play span{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#ff416c,#ff704d);color:#fff;display:grid;place-items:center;box-shadow:0 7px 18px rgba(255,65,108,.25);margin-top:-18px;border:4px solid #f5f6fa}.page-title{padding:13px 3px 15px}.page-title h1{font-size:25px}.page-title p{margin:4px 0;color:#8b8e9a;font-size:12px}.info-list{padding:4px 17px}.info-list div{display:flex;justify-content:space-between;padding:15px 0;border-bottom:1px solid #f0f0f4;font-size:12px}.info-list div:last-child{border:0}.info-list span{color:#8e919d}.empty-card{text-align:center;padding:45px 22px}.empty-card div{font-size:35px}.empty-card p{color:#8b8e9a;font-size:12px}.profile-card{text-align:center;padding:28px}.profile-avatar{margin:0 auto 12px}.profile-card p{color:#8b8e9a;font-size:12px}.modal-overlay,.modal{position:fixed;inset:0;background:rgba(18,20,28,.62);z-index:50;display:none;align-items:flex-end;justify-content:center;padding:12px}.modal-content,.auth-card,.popup-card{background:#fff;border-radius:24px;padding:22px;width:min(470px,100%);position:relative;box-shadow:0 20px 50px rgba(0,0,0,.22)}.modal-content{max-height:calc(100vh - 24px);overflow-y:auto;-webkit-overflow-scrolling:touch}.auth-card{max-width:390px;align-self:center}.modal-overlay#auth-modal{display:flex}.auth-card{text-align:center}.brand-mark{margin:0 auto 10px}.auth-card h2{font-size:22px}.auth-card p{font-size:11px;color:#8b8e9a}.auth-card .input-group{text-align:left}.switch-copy{margin-top:14px}.link-btn{border:0;background:none;color:#ff416c;font-weight:900}.auth-note{font-size:9px;color:#a2a5b0}.close-btn{position:absolute;right:14px;top:10px;border:0;background:#f3f4f7;border-radius:50%;width:32px;height:32px;font-size:20px}.helper{font-size:11px;color:#8b8e9a}.qr-payment-box{background:#fff;border:1px solid #ececf2;border-radius:16px;padding:14px;text-align:center;margin:12px 0}.qr-title{font-size:11px;font-weight:900;color:#202533;letter-spacing:.8px;margin-bottom:10px}.payment-qr{display:block;width:190px;height:190px;object-fit:contain;margin:0 auto;border-radius:8px;background:#fff}.qr-help{font-size:10px;color:#8b8e9a;margin-top:9px}.upi-box{background:#fff3f6;color:#ef4268;border-radius:12px;padding:12px;margin:10px 0;font-size:10px;display:flex;justify-content:space-between}.modal h3{margin:3px 0}.popup-card{text-align:center;max-width:320px;align-self:center}.popup-title{font-size:20px;font-weight:900}.popup-msg{font-size:12px;color:#777;margin:7px 0}.popup-icon{font-size:42px}.modal{display:none;align-items:center}.modal[style*="flex"],.modal.show{display:flex}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f5f6fa;color:#1f2430;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.app-shell{max-width:520px;margin:0 auto;min-height:100vh;background:#f5f6fa;padding-bottom:86px}.topbar{height:66px;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;background:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid #ececf2}.brand{display:flex;align-items:center;gap:10px}.brand .logo,.brand-mark,.profile-avatar{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#ff416c,#ff7a4d);color:#fff;display:grid;place-items:center;font-weight:900;box-shadow:0 7px 18px rgba(255,65,108,.25)}.brand strong{display:block;font-size:16px;letter-spacing:.2px}.brand small{display:block;color:#9b9eaa;font-size:9px;letter-spacing:2px;font-weight:800}.music-pill{border:0;background:#fff3f6;color:#ef4268;border-radius:20px;padding:9px 13px;font-weight:800;font-size:11px;cursor:pointer}.page{display:none;padding:14px}.active-page{display:block}.hero-card{margin-top:4px;border-radius:22px;padding:22px;color:#fff;background:linear-gradient(135deg,#ff416c 0%,#ff6a4d 100%);display:flex;justify-content:space-between;gap:12px;box-shadow:0 14px 30px rgba(255,65,108,.2)}.eyebrow,.section-kicker{font-size:10px;letter-spacing:1.7px;font-weight:900;color:#a3a5b0}.hero-card .eyebrow{color:rgba(255,255,255,.75)}h1{margin:4px 0;font-size:24px;line-height:1.15}h2{margin:3px 0;font-size:18px}.hero-card p{margin:8px 0 0;color:rgba(255,255,255,.86);font-size:12px}.hero-badge{align-self:flex-start;background:rgba(255,255,255,.2);padding:7px 9px;border-radius:20px;font-size:10px;font-weight:900}.wallet-card{background:#202533;color:#fff;border-radius:20px;padding:18px;margin-top:12px;box-shadow:0 12px 28px rgba(32,37,51,.15)}.wallet-card.large{padding:24px}.wallet-top{display:flex;justify-content:space-between;color:#aeb2c0;font-size:10px}.balance{font-size:31px;font-weight:900;margin:7px 0}.user-mini{display:flex;justify-content:space-between;color:#c3c6d0;font-size:11px;padding-bottom:13px}.wallet-actions{display:flex;gap:9px}.wallet-btn{flex:1;border:0;border-radius:12px;padding:11px 8px;font-weight:900;font-size:11px;cursor:pointer}.wallet-btn.add{background:#ff416c;color:#fff}.wallet-btn.withdraw{background:#303646;color:#fff}.section-head{display:flex;align-items:end;justify-content:space-between;margin:18px 2px 10px}.section-head h2{font-size:19px}.timer-chip{min-width:58px;text-align:center;background:#fff;border:1px solid #ececf2;color:#ff416c;padding:8px 10px;border-radius:12px;font-weight:900}.game-card,.result-card,.empty-card,.profile-card,.info-list{background:#fff;border-radius:20px;padding:17px;box-shadow:0 8px 24px rgba(30,33,45,.06);margin-bottom:12px}.round-title{display:flex;justify-content:space-between;font-size:11px;font-weight:900;color:#555a68;margin-bottom:15px}.live-dot{color:#ff416c}.choice-label{font-size:12px;font-weight:900;margin:13px 0 9px}.choice-label span{float:right;color:#a0a3ae;font-size:10px}.color-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.color-choice{border:0;color:#fff;padding:12px 5px;border-radius:12px;font-weight:900;cursor:pointer}.green{background:#28c76f}.red{background:#ff416c}.violet{background:#8e5cf6}.number-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}.num-btn{border:1px solid #ececf2;background:#fff;padding:11px 0;border-radius:11px;font-weight:900;color:#343847;cursor:pointer}.num-btn.n0,.num-btn.n2,.num-btn.n4,.num-btn.n6,.num-btn.n8{color:#ff416c;border-color:#ffd0da;background:#fff7f9}.num-btn.n1,.num-btn.n3,.num-btn.n5,.num-btn.n7,.num-btn.n9{color:#28c76f;border-color:#c9f2dc;background:#f5fff9}.num-btn.n0,.num-btn.n5{background:linear-gradient(135deg,#fff7f9 0%,#f6efff 100%);color:#8e5cf6;border-color:#dccfff}.winning-number{font-weight:900;padding:5px 10px;border-radius:20px;background:#f3f4f7}.winning-number.red-number{color:#ff416c;background:#fff0f3}.winning-number.green-number{color:#28c76f;background:#edfff5}.winning-number.violet-number{color:#8e5cf6;background:#f3edff}.color-choice:active,.num-btn:active{transform:scale(.97)}.color-choice.selected,.num-btn.selected{outline:3px solid #202533;outline-offset:2px;transform:scale(1.04);transition:.15s}.input-group{margin-top:12px}.input-group label{display:block;font-size:10px;font-weight:900;color:#777b88;margin-bottom:6px}.input-group input{width:100%;border:1px solid #e5e6ec;background:#fafbfc;border-radius:11px;padding:12px;outline:none;font-size:13px;color:#222}.input-group input:focus{border-color:#ff6a86}.primary-btn,.secondary-btn{border:0;border-radius:12px;padding:13px;font-weight:900;font-size:11px;cursor:pointer}.primary-btn{background:linear-gradient(135deg,#ff416c,#ff704d);color:#fff;box-shadow:0 8px 18px rgba(255,65,108,.18)}.primary-btn:disabled{opacity:.55;cursor:not-allowed;box-shadow:none}.secondary-btn{background:#202533;color:#fff}.wide{width:100%;margin-top:11px}.selected{text-align:center;font-size:11px;color:#28a66a;font-weight:900;padding:8px}.message{text-align:center;font-size:11px;color:#6c7180;min-height:15px}.result-card h3{margin:3px 0 12px}.result-row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid #f0f0f4;font-size:12px}.result-row:last-child{border-bottom:0}.res-badge{padding:5px 10px;border-radius:20px;background:#ececf2}.bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(520px,100%);height:70px;background:rgba(255,255,255,.97);border-top:1px solid #ececf2;display:grid;grid-template-columns:repeat(6,1fr);z-index:30;padding-bottom:env(safe-area-inset-bottom)}.nav-item{border:0;background:none;color:#9da1ad;font-size:10px;font-weight:800;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer}.nav-item span{font-size:20px;line-height:18px}.nav-item.active{color:#ff416c}.nav-item.play span{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#ff416c,#ff704d);color:#fff;display:grid;place-items:center;box-shadow:0 7px 18px rgba(255,65,108,.25);margin-top:-18px;border:4px solid #f5f6fa}.page-title{padding:13px 3px 15px}.page-title h1{font-size:25px}.page-title p{margin:4px 0;color:#8b8e9a;font-size:12px}.info-list{padding:4px 17px}.info-list div{display:flex;justify-content:space-between;padding:15px 0;border-bottom:1px solid #f0f0f4;font-size:12px}.info-list div:last-child{border:0}.info-list span{color:#8e919d}.empty-card{text-align:center;padding:45px 22px}.empty-card div{font-size:35px}.empty-card p{color:#8b8e9a;font-size:12px}.profile-card{text-align:center;padding:28px}.profile-avatar{margin:0 auto 12px}.profile-card p{color:#8b8e9a;font-size:12px}.modal-overlay,.modal{position:fixed;inset:0;background:rgba(18,20,28,.62);z-index:50;display:none;align-items:flex-end;justify-content:center;padding:12px}.modal-content,.auth-card,.popup-card{background:#fff;border-radius:24px;padding:22px;width:min(470px,100%);position:relative;box-shadow:0 20px 50px rgba(0,0,0,.22)}.modal-content{max-height:calc(100vh - 24px);overflow-y:auto}.auth-card{max-width:390px;align-self:center}.modal-overlay#auth-modal{display:flex}.auth-card{text-align:center}.brand-mark{margin:0 auto 10px}.auth-card h2{font-size:22px}.auth-card p{font-size:11px;color:#8b8e9a}.auth-card .input-group{text-align:left}.switch-copy{margin-top:14px}.link-btn{border:0;background:none;color:#ff416c;font-weight:900;cursor:pointer}.auth-note{font-size:9px;color:#a2a5b0}.close-btn{position:absolute;right:14px;top:10px;border:0;background:#f3f4f7;border-radius:50%;width:32px;height:32px;font-size:20px;cursor:pointer}.helper{font-size:11px;color:#8b8e9a}.qr-payment-box{background:#fff;border:1px solid #ececf2;border-radius:16px;padding:14px;text-align:center;margin:12px 0}.qr-title{font-size:11px;font-weight:900;color:#202533;letter-spacing:.8px;margin-bottom:10px}.payment-qr{display:block;width:190px;height:190px;object-fit:contain;margin:0 auto;border-radius:8px;background:#fff}.qr-help{font-size:10px;color:#8b8e9a;margin-top:9px}.upi-box{background:#fff3f6;color:#ef4268;border-radius:12px;padding:12px;margin:10px 0;font-size:10px;display:flex;justify-content:space-between}.popup-card{text-align:center;max-width:320px;align-self:center}.popup-title{font-size:20px;font-weight:900}.popup-msg{font-size:12px;color:#777;margin:7px 0}.popup-icon{font-size:42px}
 @media(min-width:700px){body{background:#e9eaf0}.app-shell{box-shadow:0 0 50px rgba(0,0,0,.08)}}
-.history-tabs{display:flex;gap:8px;margin:16px 0}.history-tab{flex:1;border:1px solid #e4e5ec;background:#fff;border-radius:12px;padding:10px 6px;font-weight:800;color:#555}.history-tab.active{background:#1f2430;color:#fff}.history-list{display:grid;gap:10px}.history-card{background:#fff;border:1px solid #ececf2;border-radius:16px;padding:14px;display:flex;align-items:center;justify-content:space-between}.history-left{display:flex;gap:11px;align-items:center}.history-icon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:#f2f3f7;font-size:20px}.history-title{font-weight:900}.history-date{font-size:12px;color:#888;margin-top:3px}.history-right{text-align:right}.history-amount{font-weight:900;font-size:16px}.status{font-size:11px;font-weight:900;margin-top:4px;text-transform:uppercase}.status.approved{color:#16803a}.status.pending{color:#d98200}.status.rejected{color:#c62828}.history-empty{background:#fff;border-radius:16px;padding:28px 18px;text-align:center;color:#777}</style></head>
+.history-tabs{display:flex;gap:8px;margin:16px 0}.history-tab{flex:1;border:1px solid #e4e5ec;background:#fff;border-radius:12px;padding:10px 6px;font-weight:800;color:#555;cursor:pointer}.history-tab.active{background:#1f2430;color:#fff}.history-list{display:grid;gap:10px}.history-card{background:#fff;border:1px solid #ececf2;border-radius:16px;padding:14px;display:flex;align-items:center;justify-content:space-between}.history-left{display:flex;gap:11px;align-items:center}.history-icon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:#f2f3f7;font-size:20px}.history-title{font-weight:900}.history-date{font-size:12px;color:#888;margin-top:3px}.history-right{text-align:right}.history-amount{font-weight:900;font-size:16px}.status{font-size:11px;font-weight:900;margin-top:4px;text-transform:uppercase}.status.approved{color:#16803a}.status.pending{color:#d98200}.status.rejected{color:#c62828}.history-empty{background:#fff;border-radius:16px;padding:28px 18px;text-align:center;color:#777}
+.aviator-card{background:linear-gradient(135deg,#1a1f2e 0%,#2d1b3d 50%,#4a1f3d 100%);color:#fff;border-radius:20px;padding:18px;margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 12px 28px rgba(30,33,45,.25);cursor:pointer;position:relative;overflow:hidden;border:1px solid rgba(255,65,108,.3);transition:.15s}.aviator-card:active{transform:scale(.98)}.aviator-card::before{content:'✈';position:absolute;right:-10px;top:-15px;font-size:90px;opacity:.08;transform:rotate(-20deg)}.aviator-card-logo{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,#ff416c,#ff704d);display:grid;place-items:center;font-size:28px;box-shadow:0 8px 20px rgba(255,65,108,.4);flex-shrink:0}.aviator-card-text{flex:1;min-width:0}.aviator-card-text strong{font-size:15px;display:block;letter-spacing:.3px}.aviator-card-text small{display:block;color:#b8bcc8;font-size:10px;margin-top:3px}.aviator-play-badge{background:linear-gradient(135deg,#ff416c,#ff704d);color:#fff;font-weight:900;font-size:11px;padding:9px 14px;border-radius:20px;white-space:nowrap;box-shadow:0 6px 16px rgba(255,65,108,.35);flex-shrink:0}
+.aviator-page-wrap{padding:14px}.aviator-topbar{display:flex;align-items:center;justify-content:space-between;background:#fff;border-radius:16px;padding:12px 14px;margin-bottom:12px;box-shadow:0 8px 24px rgba(30,33,45,.06)}.aviator-back{background:#f3f4f7;border:0;border-radius:10px;width:38px;height:38px;font-size:18px;cursor:pointer;color:#202533;font-weight:900}.aviator-balance-pill{background:linear-gradient(135deg,#202533,#303646);color:#fff;border-radius:12px;padding:9px 14px;font-weight:900;font-size:13px}.aviator-balance-pill small{display:block;font-size:9px;color:#b8bcc8;font-weight:700}
+.aviator-stage{position:relative;width:100%;height:260px;background:linear-gradient(180deg,#0a0d18 0%,#1a1f2e 100%);border-radius:22px;overflow:hidden;box-shadow:0 12px 28px rgba(0,0,0,.3);margin-bottom:12px}.aviator-stage canvas{display:block;width:100%;height:100%}.aviator-multiplier-display{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none}#av-multiplier-text{font-size:52px;font-weight:900;color:#fff;letter-spacing:1px;line-height:1;text-shadow:0 4px 20px rgba(255,65,108,.6)}#av-multiplier-text.crashed{color:#ff416c}#av-multiplier-text.waiting{font-size:32px;color:#b8bcc8;letter-spacing:2px}.av-status-badge{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;font-size:10px;font-weight:900;padding:5px 10px;border-radius:20px;letter-spacing:1px}.av-round-badge{position:absolute;top:12px;right:12px;background:rgba(255,65,108,.15);border:1px solid rgba(255,65,108,.4);color:#ff8aa5;font-size:10px;font-weight:900;padding:5px 10px;border-radius:20px;letter-spacing:1px}
+.aviator-history-strip{display:flex;gap:6px;overflow-x:auto;padding:10px 12px;background:#fff;border-radius:14px;margin-bottom:12px;box-shadow:0 8px 24px rgba(30,33,45,.06)}.aviator-history-strip::-webkit-scrollbar{display:none}.av-hist-chip{flex-shrink:0;font-weight:900;font-size:11px;padding:5px 10px;border-radius:20px;background:#f0fff5;color:#28a66a;border:1px solid #c9f2dc}.av-hist-chip.mid{background:#fff7e6;color:#d98200;border-color:#ffe1a3}.av-hist-chip.high{background:#fff0f4;color:#ef4268;border-color:#ffc8d6}
+.aviator-controls{background:#fff;border-radius:20px;padding:16px;box-shadow:0 8px 24px rgba(30,33,45,.06)}.av-quick{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}.av-quick button{flex:1;min-width:60px;background:#f5f6fa;color:#202533;border:0;border-radius:10px;padding:8px;font-weight:900;font-size:11px;cursor:pointer}.av-action-btn{width:100%;margin-top:12px;border:0;border-radius:14px;padding:16px;font-weight:900;font-size:15px;letter-spacing:.5px;cursor:pointer;transition:.15s}.av-action-btn:active{transform:scale(.98)}.av-action-btn.bet{background:linear-gradient(135deg,#28c76f,#20b862);color:#fff;box-shadow:0 8px 20px rgba(40,199,111,.3)}.av-action-btn.cashout{background:linear-gradient(135deg,#ffb800,#ff8c00);color:#fff;box-shadow:0 8px 20px rgba(255,140,0,.35)}.av-action-btn.waiting{background:#e5e7ec;color:#8b8e9a;cursor:not-allowed}.av-action-btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
+.add-money-amount-card{background:linear-gradient(135deg,#ff416c,#ff704d);color:#fff;border-radius:20px;padding:20px;margin-bottom:16px;box-shadow:0 12px 28px rgba(255,65,108,.25)}.add-money-amount-card label{font-size:11px;font-weight:900;letter-spacing:1px;text-transform:uppercase;opacity:.85;display:block;margin-bottom:10px}.amount-input-row{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.18);border-radius:14px;padding:10px 14px;margin-bottom:12px}.rupee-sign{font-size:26px;font-weight:900}.amount-input-row input{flex:1;background:transparent;border:0;outline:none;color:#fff;font-size:26px;font-weight:900;padding:0;width:100%}.amount-input-row input::placeholder{color:rgba(255,255,255,.5)}.quick-amounts{display:flex;gap:6px;overflow-x:auto}.quick-amounts button{background:rgba(255,255,255,.22);color:#fff;border:0;border-radius:20px;padding:7px 13px;font-size:11px;font-weight:900;cursor:pointer;white-space:nowrap;flex-shrink:0}.am-section-title{font-size:13px;font-weight:900;color:#202533;margin:18px 4px 10px}.upi-apps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;background:#fff;border-radius:18px;padding:14px;box-shadow:0 8px 24px rgba(30,33,45,.06)}.upi-app{display:flex;flex-direction:column;align-items:center;gap:6px;background:transparent;border:0;cursor:pointer;padding:6px;border-radius:12px}.upi-app:active{background:#f5f6fa;transform:scale(.96)}.upi-app-icon{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;font-size:20px;font-weight:900;color:#fff;box-shadow:0 4px 10px rgba(0,0,0,.12)}.upi-app-name{font-size:10px;font-weight:800;color:#555;text-align:center}.am-hint{font-size:10px;color:#8b8e9a;text-align:center;margin:8px 0 0;font-weight:600}.upi-id-box{display:flex;justify-content:space-between;align-items:center;background:#fff3f6;border:1.5px dashed #ffb3c4;border-radius:16px;padding:14px 16px}.upi-id-label{font-size:10px;color:#ef4268;font-weight:900;letter-spacing:1px}.upi-id-value{font-size:15px;font-weight:900;color:#202533;margin-top:3px}.copy-btn{background:#ff416c;color:#fff;border:0;border-radius:10px;padding:9px 13px;font-weight:900;font-size:11px;cursor:pointer}.am-card{background:#fff;border-radius:18px;padding:16px;box-shadow:0 8px 24px rgba(30,33,45,.06)}.am-note{font-size:10px;color:#8b8e9a;margin:8px 0 0}
+.screenshot-upload{border:2px dashed #c7cad3;border-radius:14px;padding:18px;text-align:center;cursor:pointer;background:#fafbfc;transition:.15s}.screenshot-upload.has-image{border-style:solid;border-color:#28c76f;background:#f0fff5}.screenshot-upload img{max-width:100%;max-height:220px;border-radius:10px;display:block;margin:0 auto}#screenshot-preview{display:flex;flex-direction:column;align-items:center;gap:6px}
+.wager-card{background:#fff;border-radius:18px;padding:16px;margin-bottom:12px;box-shadow:0 8px 24px rgba(30,33,45,.06)}.wager-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.wager-header strong{font-size:13px}.wager-header span{font-size:11px;color:#8b8e9a;font-weight:700}.wager-bar{width:100%;height:12px;background:#f0f1f5;border-radius:20px;overflow:hidden}.wager-fill{height:100%;width:0%;background:linear-gradient(90deg,#ff416c,#ff704d);border-radius:20px;transition:width .5s ease}.wager-fill.complete{background:linear-gradient(90deg,#28c76f,#20b862)}.wager-info{display:flex;justify-content:space-between;font-size:10px;margin-top:8px;color:#555a68;font-weight:700}.wager-alert{background:#fff7e6;border:1px dashed #ffcc66;border-radius:10px;padding:10px;margin-top:10px;font-size:11px;color:#8a5a00;font-weight:700;display:flex;gap:8px;align-items:flex-start}.wager-alert.ok{background:#f0fff5;border-color:#7ed99f;color:#1e7a44}.wager-alert-icon{font-size:16px;flex-shrink:0}
+</style></head>
 <body>
-  <div id="outcome-popup" class="modal-overlay">
-    <div class="popup-card">
-      <div id="popup-icon" class="popup-icon">🎉</div>
-      <div id="popup-title" class="popup-title">YOU WON!</div>
-      <div id="popup-text" class="popup-msg">Aapne round jeet liya hai!</div>
-      <button class="primary-btn" onclick="closeOutcomePopup()">OK</button>
-    </div>
-  </div>
-
-  <div class="modal-overlay" id="auth-modal">
-    <div class="auth-card">
-      <div class="brand-mark">CX</div>
-      <h2 id="auth-title">Compare_X Rank</h2>
-      <p id="auth-subtitle">Login to your account</p>
-      <div class="input-group" id="name-group">
-        <label>Full Name</label>
-        <input id="auth-name" placeholder="Enter your name" type="text">
+<div id="outcome-popup" class="modal-overlay"><div class="popup-card"><div id="popup-icon" class="popup-icon">🎉</div><div id="popup-title" class="popup-title">YOU WON!</div><div id="popup-text" class="popup-msg">Aapne round jeet liya hai!</div><button class="primary-btn" onclick="closeOutcomePopup()">OK</button></div></div>
+<div class="modal-overlay" id="auth-modal"><div class="auth-card"><div class="brand-mark">CX</div><h2 id="auth-title">Compare_X Rank</h2><p id="auth-subtitle">Login to your account</p><div class="input-group" id="name-group"><label>Full Name</label><input id="auth-name" placeholder="Enter your name" type="text"></div><div class="input-group"><label>Mobile Number</label><input id="auth-mobile" inputmode="numeric" placeholder="10 digit mobile" type="text"></div><div class="input-group"><label>Password</label><input id="auth-password" placeholder="Enter password" type="password"></div><button class="primary-btn wide" onclick="handleAuthSubmit()">CONTINUE</button><p class="switch-copy"><span id="auth-toggle-msg">Don't have an account?</span> <button class="link-btn" id="auth-toggle-btn" onclick="toggleAuthMode()">Register</button></p><div id="auth-note">Secure login • No SMS OTP required</div></div></div>
+<div class="modal" id="withdraw-modal"><div class="modal-content"><button class="close-btn" onclick="closeModal('withdraw-modal')">×</button><div class="section-kicker">WALLET</div><h3>Withdraw Money</h3><div class="input-group"><label>Withdraw Amount (₹)</label><input id="wd-amount" min="110" type="number" value="200"></div><div class="input-group"><label>UPI ID</label><input id="wd-upi" placeholder="name@upi" type="text"></div><button class="primary-btn wide" onclick="submitWithdraw()">WITHDRAW NOW</button></div></div>
+<div class="app-shell">
+  <header class="topbar"><div class="brand"><div class="logo">CX</div><div><strong>Compare_X</strong><small>RANK</small></div></div><button class="music-pill" id="music-btn" onclick="toggleBGM()">▶ Music</button></header>
+  <main>
+    <section id="home-page" class="page active-page">
+      <div class="hero-card"><div><span class="eyebrow">WELCOME BACK</span><h1>Play. Compare. Rank.</h1><p>Fast rounds with a clean, mobile-first experience.</p></div><div class="hero-badge">⚡ LIVE</div></div>
+      <div id="home-vip-banner" style="display:none;background:#fff7e6;border:2px dashed #ffcc66;border-radius:16px;padding:14px;margin:12px 0;color:#8a5a00;font-weight:700;font-size:12px;"><div style="display:flex;align-items:center;gap:10px;"><span style="font-size:26px;">🔒</span><div style="flex:1;"><b>VIP Access Required</b><br><span style="font-size:11px;font-weight:600;">Betting के लिए पहले Add Money करें (कम से कम ₹100)</span></div></div><button onclick="openAddMoneyPage()" style="width:100%;margin-top:10px;background:linear-gradient(135deg,#ff416c,#ff704d);color:#fff;border:0;border-radius:12px;padding:12px;font-weight:900;font-size:12px;cursor:pointer;">💰 ADD MONEY TO UNLOCK VIP</button></div>
+      <div class="wallet-card"><div class="wallet-top"><span>Available Balance</span><span id="music-status">🎵 BGM: Paused</span></div><div class="balance">₹<span id="balance">0</span></div><div class="user-mini"><span id="user-name">--</span><span id="user-id">--</span></div><div class="wallet-actions"><button class="wallet-btn add" onclick="openAddMoneyPage()">＋ Add Money</button><button class="wallet-btn withdraw" onclick="handleWithdrawClick()">↗ Withdraw</button></div></div>
+      <div class="section-head"><div><span class="section-kicker">LIVE ROUND</span><h2>Choose your pick</h2></div><div class="timer-chip"><span id="countdown">--</span>s</div></div>
+      <div class="game-card">
+        <div class="round-title"><span>Current Round</span><span class="live-dot">● LIVE</span></div>
+        <div class="choice-label">Select Color <span>1.9×</span></div>
+        <div class="color-grid"><button class="color-choice green" onclick="setChoice('COLOR','GREEN')">Green</button><button class="color-choice red" onclick="setChoice('COLOR','RED')">Red</button><button class="color-choice violet" onclick="setChoice('COLOR','VIOLET')">Violet</button></div>
+        <div class="choice-label">Or select a number <span>8.5×</span></div>
+        <div class="number-grid"><button class="num-btn n0" onclick="setChoice('NUMBER',0)">0</button><button class="num-btn n1" onclick="setChoice('NUMBER',1)">1</button><button class="num-btn n2" onclick="setChoice('NUMBER',2)">2</button><button class="num-btn n3" onclick="setChoice('NUMBER',3)">3</button><button class="num-btn n4" onclick="setChoice('NUMBER',4)">4</button><button class="num-btn n5" onclick="setChoice('NUMBER',5)">5</button><button class="num-btn n6" onclick="setChoice('NUMBER',6)">6</button><button class="num-btn n7" onclick="setChoice('NUMBER',7)">7</button><button class="num-btn n8" onclick="setChoice('NUMBER',8)">8</button><button class="num-btn n9" onclick="setChoice('NUMBER',9)">9</button></div>
+        <div class="input-group amount-group"><label>Enter Amount (₹)</label><input id="bet-amount" min="10" step="10" type="number" value="10"></div>
+        <div style="background:#fff7f9;border:1px dashed #ffb3c4;border-radius:10px;padding:9px;margin:10px 0;font-size:10px;color:#ef4268;display:flex;justify-content:space-between;"><span>Min: ₹10</span><span>Max: ₹500</span><span>Daily Cap: ₹2000</span></div>
+        <div id="selected-info" class="selected">Selected: None</div>
+        <button id="place-bet-btn" class="primary-btn wide" onclick="placeBet()">PLACE BET</button>
+        <p id="msg" class="message"></p>
+        <p id="round-status" class="message"></p>
       </div>
-      <div class="input-group">
-        <label>Mobile Number</label>
-        <input id="auth-mobile" inputmode="numeric" placeholder="10 digit mobile number" type="text">
+      <div class="result-card"><div class="section-kicker">RESULT</div><h3>Latest Round</h3><div class="result-row"><span>Winning Color</span><b class="res-badge" id="res-color">--</b></div><div class="result-row"><span>Winning Number</span><b id="res-number" class="winning-number">--</b></div></div>
+      <div class="aviator-card" onclick="handleAviatorClick()"><div class="aviator-card-logo">✈</div><div class="aviator-card-text"><strong>Aviator Crash</strong><small>Plane उड़ने से पहले cash out करें</small></div><div class="aviator-play-badge">▶ PLAY</div></div>
+    </section>
+    <section id="wallet-page" class="page">
+      <div class="page-title"><span class="section-kicker">MY WALLET</span><h1>Wallet</h1><p>Manage your balance and requests.</p></div>
+      <div id="vip-banner" style="display:none;background:#fff7e6;border:2px dashed #ffcc66;border-radius:16px;padding:14px;margin-bottom:12px;color:#8a5a00;font-weight:700;font-size:12px;"><div style="display:flex;align-items:center;gap:10px;"><span style="font-size:24px;">🔒</span><div><b>VIP Not Active</b><br><span style="font-size:11px;font-weight:600;">पहली deposit करने पर VIP मिलेगा।</span></div></div></div>
+      <div class="wallet-card large"><span>Current Balance</span><div class="balance">₹<span id="wallet-balance-copy">0</span></div><div class="wallet-actions"><button class="wallet-btn add" onclick="openAddMoneyPage()">＋ Deposit</button><button class="wallet-btn withdraw" onclick="handleWithdrawClick()">↗ Withdraw</button></div><button class="primary-btn wide" onclick="openSupport()">💬 Customer Support</button></div>
+      <div class="wager-card"><div class="wager-header"><strong>🎯 Withdrawal Eligibility</strong><span id="wager-status-text">Loading...</span></div><div class="wager-bar"><div class="wager-fill" id="wager-fill"></div></div><div class="wager-info"><span>Wagered: ₹<span id="wager-completed">0</span></span><span>Required: ₹<span id="wager-required">0</span></span></div><div class="wager-alert" id="wager-alert"><div class="wager-alert-icon">ℹ️</div><div id="wager-alert-text">Withdrawal के लिए और bet लगाएँ।</div></div></div>
+      <div class="info-list"><div><span>Account</span><strong id="wallet-user">--</strong></div><div><span>Mobile</span><strong id="wallet-mobile">--</strong></div></div>
+    </section>
+    <section id="activity-page" class="page"><div class="page-title"><span class="section-kicker">ACCOUNT</span><h1>Activity</h1><p>Your account activity area.</p></div><div class="history-tabs"><button class="history-tab active" onclick="showHistory('all',this)">All</button><button class="history-tab" onclick="showHistory('deposit',this)">Add Money</button><button class="history-tab" onclick="showHistory('withdrawal',this)">Withdrawals</button></div><div id="history-list" class="history-list"><div class="empty-card"><div>🧾</div><h3>Loading history...</h3></div></div></section>
+    <section id="profile-page" class="page"><div class="page-title"><span class="section-kicker">ACCOUNT</span><h1>Profile</h1><p>Your account details.</p></div><div class="profile-card"><div class="profile-avatar">CX</div><h2 id="profile-name">--</h2><p id="profile-mobile">--</p><button class="secondary-btn wide" onclick="localStorage.removeItem('gameUser'); location.reload()">LOG OUT</button></div></section>
+    <section id="aviator-page" class="page"><div class="aviator-page-wrap"><div class="aviator-topbar"><button class="aviator-back" onclick="exitAviatorGame()">←</button><div style="font-weight:900;font-size:15px;color:#202533;">✈ Aviator</div><div class="aviator-balance-pill"><small>WALLET</small>₹<span id="aviator-balance">0</span></div></div><div class="aviator-stage"><div class="av-status-badge" id="av-status-badge">WAITING</div><div class="av-round-badge">ROUND #<span id="av-round-id">1</span></div><canvas id="aviator-canvas"></canvas><div class="aviator-multiplier-display"><div id="av-multiplier-text" class="waiting">Starting soon...</div></div></div><div class="aviator-history-strip" id="av-history-strip"></div><div class="aviator-controls"><div class="input-group"><label>Bet Amount (₹10 - ₹500)</label><input id="av-bet-input" type="number" min="10" max="500" step="10" value="100"></div><div class="av-quick"><button onclick="setAvBet(10)">₹10</button><button onclick="setAvBet(50)">₹50</button><button onclick="setAvBet(100)">₹100</button><button onclick="setAvBet(200)">₹200</button><button onclick="setAvBet(500)">₹500</button></div><button id="av-action-btn" class="av-action-btn bet" onclick="aviatorAction()">PLACE BET</button><p id="av-msg" class="message" style="margin-top:10px;"></p></div></div></section>
+    <section id="add-money-page" class="page">
+      <div class="page-title"><span class="section-kicker">WALLET</span><h1>Add Money</h1><p>QR scan करें या UPI app से pay करें।</p></div>
+      <div style="background:#e8f5e9;border:1px dashed #7ed99f;border-radius:12px;padding:12px;margin-bottom:12px;color:#1e7a44;font-weight:700;font-size:11px;display:flex;gap:8px;align-items:center;"><span style="font-size:20px;">🎁</span><div><b>VIP Access मिलेगा!</b><br>पहली deposit approve होते ही आप सभी games खेल सकेंगे।</div></div>
+      <div class="add-money-amount-card"><label>आप कितने पैसे add करना चाहते हैं?</label><div class="amount-input-row"><span class="rupee-sign">₹</span><input id="am-page-amount" type="number" min="100" step="50" value="500" inputmode="numeric"></div><div class="quick-amounts"><button onclick="setAmAmount(100)">₹100</button><button onclick="setAmAmount(200)">₹200</button><button onclick="setAmAmount(500)">₹500</button><button onclick="setAmAmount(1000)">₹1000</button><button onclick="setAmAmount(2000)">₹2000</button></div><p class="am-note" style="color:rgba(255,255,255,.75);">Minimum deposit: ₹100</p></div>
+      <div class="am-section-title">📱 UPI App से pay करें</div>
+      <div class="upi-apps-grid">
+        <button class="upi-app" onclick="payWithApp('phonepe')"><div class="upi-app-icon" style="background:linear-gradient(135deg,#5f259f,#8b5cf6);">पे</div><span class="upi-app-name">PhonePe</span></button>
+        <button class="upi-app" onclick="payWithApp('gpay')"><div class="upi-app-icon" style="background:#fff;border:2px solid #e0e0e0;color:#4285f4;">G</div><span class="upi-app-name">Google Pay</span></button>
+        <button class="upi-app" onclick="payWithApp('paytm')"><div class="upi-app-icon" style="background:#fff;border:2px solid #e0e0e0;color:#00b9f1;">Pay</div><span class="upi-app-name">Paytm</span></button>
+        <button class="upi-app" onclick="payWithApp('bhim')"><div class="upi-app-icon" style="background:linear-gradient(135deg,#ec5b2b,#ff7a4d);">भी</div><span class="upi-app-name">BHIM</span></button>
+        <button class="upi-app" onclick="payWithApp('amazon')"><div class="upi-app-icon" style="background:#fff;border:2px solid #e0e0e0;color:#ff9900;">a</div><span class="upi-app-name">Amazon Pay</span></button>
+        <button class="upi-app" onclick="payWithApp('any')"><div class="upi-app-icon" style="background:#202533;">⬆</div><span class="upi-app-name">Other UPI</span></button>
       </div>
-      <div class="input-group">
-        <label>Password</label>
-        <input id="auth-password" placeholder="Enter password" type="password">
+      <p class="am-hint">👆 किसी भी app पर tap करें — उसी app से payment हो जाएगी</p>
+      <div class="am-section-title">🔳 या QR scan करें</div>
+      <div class="qr-payment-box"><div class="qr-title">SCAN & PAY</div><img class="payment-qr" src="payment-qr.jpeg" alt="UPI QR"><div class="qr-help">कोई भी UPI app खोलें → Scan करें</div></div>
+      <div class="am-section-title">📋 या UPI ID पर भेजें</div>
+      <div class="upi-id-box"><div><div class="upi-id-label">UPI ID</div><div class="upi-id-value" id="am-upi-id">comparex@axl</div></div><button class="copy-btn" onclick="copyUPI()">📋 Copy</button></div>
+      <div class="am-section-title">✅ Payment के बाद submit करें</div>
+      <div class="am-card">
+        <div class="input-group"><label>UPI Transaction / UTR ID</label><input id="am-utr" placeholder="UTR number paste करें" type="text"></div>
+        <div class="input-group"><label>📸 Payment Screenshot (ज़रूरी है)</label><div class="screenshot-upload" id="screenshot-box" onclick="document.getElementById('am-screenshot').click()"><div id="screenshot-preview"><span style="font-size:28px;">📤</span><span style="font-size:11px;color:#8b8e9a;font-weight:700;">Screenshot choose करें</span><span style="font-size:10px;color:#a3a5b0;">Payment हो जाने के बाद</span></div><input id="am-screenshot" type="file" accept="image/*" style="display:none;" onchange="handleScreenshotSelect(event)"></div><button type="button" id="clear-screenshot-btn" onclick="clearScreenshot()" style="display:none;margin-top:8px;background:#ff416c;color:#fff;border:0;border-radius:8px;padding:7px 14px;font-size:11px;font-weight:900;cursor:pointer;">✕ हटाएँ</button></div>
+        <button class="primary-btn wide" onclick="submitDepositFromPage(event)">SUBMIT DEPOSIT REQUEST</button>
+        <p class="am-note" style="margin-top:10px;">⏳ Admin approval के बाद amount wallet में add होगा (5-30 मिनट में)</p>
       </div>
-      <button class="primary-btn wide" onclick="handleAuthSubmit()">CONTINUE</button>
-      <p class="switch-copy"><span id="auth-toggle-msg">Don't have an account?</span>
-        <button class="link-btn" id="auth-toggle-btn" onclick="toggleAuthMode()">Register</button>
-      </p>
-      <div id="auth-note">Secure login • No SMS OTP required</div>
-    </div>
-  </div>
+      <button class="secondary-btn wide" style="margin-top:12px;" onclick="showPage('home-page', document.querySelector('.nav-item'))">← Back to Home</button>
+    </section>
+  </main>
+  <nav class="bottom-nav">
+    <button class="nav-item active" data-page="home-page" onclick="showPage('home-page',this)"><span>⌂</span><small>Home</small></button>
+    <button class="nav-item" data-page="wallet-page" onclick="showPage('wallet-page',this)"><span>◈</span><small>Wallet</small></button>
+    <button class="nav-item play" data-page="home-page" onclick="showPage('home-page',this)"><span>▶</span><small>Play</small></button>
+    <button class="nav-item" data-page="activity-page" onclick="showPage('activity-page',this)"><span>▣</span><small>Activity</small></button>
+    <button class="nav-item" onclick="openSupport()"><span>💬</span><small>Support</small></button>
+    <button class="nav-item" data-page="profile-page" onclick="showPage('profile-page',this)"><span>●</span><small>Profile</small></button>
+  </nav>
+</div>
+<script src="config.js"></script>
+<script>
+const BACKEND_URL = (window.GAME_API_URL || "").replace(/\/$/, "");
+let currentUser = JSON.parse(localStorage.getItem("gameUser")) || null;
+let isRegisterMode = false;
+let currentBetType = null, currentBetValue = null, activeBet = null, lastProcessedRoundId = null, currentRoundStatus = 'OPEN', userIsVip = false;
 
-  <div class="modal" id="deposit-modal">
-    <div class="modal-content">
-      <button class="close-btn" onclick="closeModal('deposit-modal')">×</button>
-      <div class="section-kicker">WALLET</div>
-      <h3>Add Money</h3>
-      <p class="helper">Pay using your UPI app, then submit the UTR for review.</p>
-      <div class="qr-payment-box">
-        <div class="qr-title">SCAN & PAY</div>
-        <img class="payment-qr" src="payment-qr.jpeg" alt="UPI Payment QR Code" loading="eager">
-        <div class="qr-help">Open any UPI app and scan this QR code</div>
-      </div>
-      <div class="upi-box"><span>UPI ID</span><strong>comparex@axl</strong></div>
-      <div class="input-group"><label>Deposit Amount (₹)</label><input id="dep-amount" min="100" type="number" value="500"></div>
-      <button class="primary-btn wide" onclick="payViaUPI()" type="button">PAY VIA UPI</button>
-      <div class="input-group"><label>UPI Transaction / UTR ID</label><input id="dep-utr" placeholder="Enter UTR number" type="text"></div>
-      <button class="secondary-btn wide" onclick="submitDeposit()">SUBMIT DEPOSIT</button>
-    </div>
-  </div>
+let soundCtx = null;
+function getSoundCtx(){if(!soundCtx)soundCtx=new(window.AudioContext||window.webkitAudioContext)();if(soundCtx.state==='suspended')soundCtx.resume();return soundCtx;}
+function playWinSound(){try{const ctx=getSoundCtx();[523.25,659.25,783.99].forEach((f,i)=>{const o=ctx.createOscillator(),g=ctx.createGain();o.type='triangle';o.frequency.setValueAtTime(f,ctx.currentTime+i*0.12);g.gain.setValueAtTime(0,ctx.currentTime+i*0.12);g.gain.linearRampToValueAtTime(0.18,ctx.currentTime+i*0.12+0.02);g.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+i*0.12+0.35);o.connect(g);g.connect(ctx.destination);o.start(ctx.currentTime+i*0.12);o.stop(ctx.currentTime+i*0.12+0.4);});}catch(e){}}
+function playLoseSound(){try{const ctx=getSoundCtx();const o=ctx.createOscillator(),g=ctx.createGain();o.type='sawtooth';o.frequency.setValueAtTime(320,ctx.currentTime);o.frequency.exponentialRampToValueAtTime(90,ctx.currentTime+0.5);g.gain.setValueAtTime(0.18,ctx.currentTime);g.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+0.55);o.connect(g);g.connect(ctx.destination);o.start();o.stop(ctx.currentTime+0.55);}catch(e){}}
+function playAviatorTakeoff(){try{const ctx=getSoundCtx();const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.setValueAtTime(180,ctx.currentTime);o.frequency.exponentialRampToValueAtTime(680,ctx.currentTime+0.7);g.gain.setValueAtTime(0.001,ctx.currentTime);g.gain.linearRampToValueAtTime(0.12,ctx.currentTime+0.15);g.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+0.85);o.connect(g);g.connect(ctx.destination);o.start();o.stop(ctx.currentTime+0.9);}catch(e){}}
+let _lastTickTime=0;
+function playAviatorTick(m){try{const n=Date.now();if(n-_lastTickTime<280)return;_lastTickTime=n;const ctx=getSoundCtx();const o=ctx.createOscillator(),g=ctx.createGain();o.type='square';o.frequency.setValueAtTime(500+Math.min(600,m*60),ctx.currentTime);g.gain.setValueAtTime(0.035,ctx.currentTime);g.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+0.08);o.connect(g);g.connect(ctx.destination);o.start();o.stop(ctx.currentTime+0.09);}catch(e){}}
+function playAviatorCashout(){try{const ctx=getSoundCtx();[880,1174.66,1567.98].forEach((f,i)=>{const o=ctx.createOscillator(),g=ctx.createGain();o.type='triangle';o.frequency.setValueAtTime(f,ctx.currentTime+i*0.08);g.gain.setValueAtTime(0,ctx.currentTime+i*0.08);g.gain.linearRampToValueAtTime(0.2,ctx.currentTime+i*0.08+0.01);g.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+i*0.08+0.3);o.connect(g);g.connect(ctx.destination);o.start(ctx.currentTime+i*0.08);o.stop(ctx.currentTime+i*0.08+0.35);});}catch(e){}}
+function playAviatorCrash(){try{const ctx=getSoundCtx();const o=ctx.createOscillator(),g=ctx.createGain();o.type='sawtooth';o.frequency.setValueAtTime(160,ctx.currentTime);o.frequency.exponentialRampToValueAtTime(45,ctx.currentTime+0.5);g.gain.setValueAtTime(0.25,ctx.currentTime);g.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+0.55);o.connect(g);g.connect(ctx.destination);o.start();o.stop(ctx.currentTime+0.6);const b=ctx.createBuffer(1,ctx.sampleRate*0.15,ctx.sampleRate),d=b.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/d.length,2);const n=ctx.createBufferSource(),ng=ctx.createGain();n.buffer=b;ng.gain.setValueAtTime(0.15,ctx.currentTime);ng.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+0.2);n.connect(ng);ng.connect(ctx.destination);n.start();}catch(e){}}
+function playBetPlaced(){try{const ctx=getSoundCtx();const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.setValueAtTime(700,ctx.currentTime);o.frequency.exponentialRampToValueAtTime(1000,ctx.currentTime+0.08);g.gain.setValueAtTime(0.12,ctx.currentTime);g.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+0.12);o.connect(g);g.connect(ctx.destination);o.start();o.stop(ctx.currentTime+0.15);}catch(e){}}
+function playCountdownBeep(){try{const ctx=getSoundCtx();const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.setValueAtTime(1200,ctx.currentTime);g.gain.setValueAtTime(0.06,ctx.currentTime);g.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+0.08);o.connect(g);g.connect(ctx.destination);o.start();o.stop(ctx.currentTime+0.1);}catch(e){}}
+let audioCtx=null,isMusicPlaying=false,musicInterval=null;
+function toggleBGM(){isMusicPlaying?stopBGM():startBGM();}
+function startBGM(){if(isMusicPlaying)return;audioCtx=new(window.AudioContext||window.webkitAudioContext)();isMusicPlaying=true;document.getElementById("music-status").innerText="🎵 BGM: Playing";document.getElementById("music-btn").innerText="Pause Music";const notes=[261.63,329.63,392.00,523.25];let i=0;function playTone(){if(!isMusicPlaying||!audioCtx)return;try{const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type='triangle';o.frequency.setValueAtTime(notes[i],audioCtx.currentTime);g.gain.setValueAtTime(0.05,audioCtx.currentTime);g.gain.exponentialRampToValueAtTime(0.001,audioCtx.currentTime+0.4);o.connect(g);g.connect(audioCtx.destination);o.start();o.stop(audioCtx.currentTime+0.4);i=(i+1)%notes.length;}catch(e){}}musicInterval=setInterval(playTone,350);}
+function stopBGM(){isMusicPlaying=false;if(musicInterval)clearInterval(musicInterval);if(audioCtx)audioCtx.close();document.getElementById("music-status").innerText="🎵 BGM: Paused";document.getElementById("music-btn").innerText="Play Music";}
+window.addEventListener('click',()=>{getSoundCtx();if(!isMusicPlaying)startBGM();},{once:true});
 
-  <div class="modal" id="withdraw-modal">
-    <div class="modal-content">
-      <button class="close-btn" onclick="closeModal('withdraw-modal')">×</button>
-      <div class="section-kicker">WALLET</div>
-      <h3>Withdraw Money</h3>
-      <div class="input-group"><label>Withdraw Amount (₹)</label><input id="wd-amount" min="110" type="number" value="200"></div>
-      <div class="input-group"><label>UPI ID</label><input id="wd-upi" placeholder="name@upi" type="text"></div>
-      <button class="primary-btn wide" onclick="submitWithdraw()">WITHDRAW NOW</button>
-    </div>
-  </div>
+function showPage(id,el){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active-page'));const p=document.getElementById(id);if(p)p.classList.add('active-page');document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));if(el)el.classList.add('active');if(id==='wallet-page'){updateWagerUI();if(typeof loadTransactionHistory==='function')loadTransactionHistory();}if(id==='profile-page'&&window.currentUser){document.getElementById('profile-name').innerText=window.currentUser.name||'--';document.getElementById('profile-mobile').innerText=window.currentUser.mobile||'--';}if(id==='activity-page')loadTransactionHistory();window.scrollTo({top:0,behavior:'smooth'});}
+window.onload=()=>{if(currentUser){document.getElementById("auth-modal").style.display="none";loadUserData();}};
+function toggleAuthMode(){isRegisterMode=!isRegisterMode;document.getElementById("auth-title").innerText=isRegisterMode?"Register":"Login";document.getElementById("name-group").style.display=isRegisterMode?"block":"none";document.getElementById("auth-toggle-msg").innerText=isRegisterMode?"Already have an account?":"Don't have an account?";document.getElementById("auth-toggle-btn").innerText=isRegisterMode?"Login":"Register";}
+async function handleAuthSubmit(){const m=document.getElementById("auth-mobile").value,p=document.getElementById("auth-password").value,n=document.getElementById("auth-name").value;if(!m||!p)return alert("Mobile and password required!");const ep=isRegisterMode?"/api/register":"/api/login";const pl=isRegisterMode?{name:n,mobile:m,password:p}:{mobile:m,password:p};try{const r=await fetch(`${BACKEND_URL}${ep}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(pl)});const d=await r.json();if(d.success){currentUser=d.user;localStorage.setItem("gameUser",JSON.stringify(currentUser));document.getElementById("auth-modal").style.display="none";loadUserData();alert(d.message);}else alert(d.message);}catch(e){alert("Error connecting to server!");}}
+function loadUserData(){if(!currentUser)return;document.getElementById("user-name").innerText=currentUser.name;document.getElementById("user-id").innerText=currentUser.mobile;fetchBalance();}
+function openModal(id){document.getElementById(id).style.display="flex";}
+function closeModal(id){document.getElementById(id).style.display="none";}
+function showOutcomePopup(isWin,title,text){const p=document.getElementById("outcome-popup");const pi=document.getElementById("popup-icon");const pt=document.getElementById("popup-title");const px=document.getElementById("popup-text");if(isWin){pi.innerText="🎉";pt.style.color="#28a745";}else{pi.innerText="❌";pt.style.color="#dc3545";}pt.innerText=title;px.innerText=text;p.style.display="flex";}
+function closeOutcomePopup(){document.getElementById("outcome-popup").style.display="none";}
 
-  <div class="app-shell">
-    <header class="topbar">
-      <div class="brand">
-        <div class="logo">CX</div>
-        <div><strong>Compare_X</strong><small>RANK</small></div>
-      </div>
-      <button class="music-pill" id="music-btn" onclick="toggleBGM()">▶ Music</button>
-    </header>
+async function submitWithdraw(){const a=document.getElementById("wd-amount").value,u=document.getElementById("wd-upi").value;if(!u)return alert("UPI ID डालें!");try{const r=await fetch(`${BACKEND_URL}/api/withdraw`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({userId:currentUser.mobile,amount:a,upiId:u})});const d=await r.json();alert(d.message);if(d.success){closeModal('withdraw-modal');fetchBalance();loadTransactionHistory();updateWagerUI();}}catch(e){alert("Withdrawal failed!");}}
+async function handleWithdrawClick(){if(!currentUser)return alert("Login करें!");try{const r=await fetch(`${BACKEND_URL}/api/user/${currentUser.mobile}`);const d=await r.json();if(d.wagerPending>0){alert(`⚠️ Withdrawal नहीं हो सकता!\n\n₹${d.wagerPending.toFixed(0)} का और bet लगाना ज़रूरी है।\n\nProgress: ₹${d.wagerCompleted.toFixed(0)} / ₹${d.wagerRequired.toFixed(0)}`);return;}openModal('withdraw-modal');}catch(e){openModal('withdraw-modal');}}
 
-    <main>
-      <section id="home-page" class="page active-page">
-        <div class="hero-card">
-          <div>
-            <span class="eyebrow">WELCOME BACK</span>
-            <h1>Play. Compare. Rank.</h1>
-            <p>Fast rounds with a clean, mobile-first experience.</p>
-          </div>
-          <div class="hero-badge">⚡ LIVE</div>
-        </div>
+function setChoice(type,value){currentBetType=type;currentBetValue=value;document.getElementById("selected-info").innerText=`Selected: ${type} -> ${value}`;document.querySelectorAll('.color-choice,.num-btn').forEach(b=>b.classList.remove('selected'));if(type==='COLOR'){document.querySelectorAll('.color-choice').forEach(b=>{if(b.innerText.toUpperCase()===String(value).toUpperCase())b.classList.add('selected');});}else{document.querySelectorAll('.num-btn').forEach(b=>{if(b.innerText===String(value))b.classList.add('selected');});}}
 
-        <div class="wallet-card">
-          <div class="wallet-top"><span>Available Balance</span><span id="music-status">🎵 BGM: Paused</span></div>
-          <div class="balance">₹<span id="balance">0</span></div>
-          <div class="user-mini"><span id="user-name">--</span><span id="user-id">--</span></div>
-          <div class="wallet-actions">
-            <button class="wallet-btn add" onclick="openModal('deposit-modal')">＋ Add Money</button>
-            <button class="wallet-btn withdraw" onclick="openModal('withdraw-modal')">↗ Withdraw</button>
-          </div>
-        </div>
+setInterval(async()=>{try{const r=await fetch(`${BACKEND_URL}/api/game-status`);const d=await r.json();document.getElementById("countdown").innerText=d.timeLeft;currentRoundStatus=d.status||'OPEN';const bb=document.getElementById('place-bet-btn');const se=document.getElementById('round-status');if(bb){if(currentRoundStatus==='OPEN'){bb.disabled=!userIsVip;bb.innerText=userIsVip?'PLACE BET':'🔒 VIP REQUIRED';if(se)se.innerText=userIsVip?'':'Add Money करके VIP unlock करें';}else{bb.disabled=true;bb.innerText='BETTING CLOSED — WAIT FOR NEXT ROUND';if(se)se.innerText='⏳ Result declare हो रहा है...';}}if(d.timeLeft<=3&&d.timeLeft>0&&d.status==='OPEN')playCountdownBeep();if(d.lastWinningColor&&d.lastWinningNumber!==null){const cb=document.getElementById("res-color");cb.innerText=d.lastWinningColor;if(d.lastWinningColor==="GREEN")cb.style.backgroundColor="#28a745";else if(d.lastWinningColor==="RED")cb.style.backgroundColor="#dc3545";else if(d.lastWinningColor==="VIOLET")cb.style.backgroundColor="#6f42c1";const we=document.getElementById("res-number");const wn=Number(d.lastWinningNumber);we.innerText=d.lastWinningNumber;we.className="winning-number "+((wn===0||wn===5)?"violet-number":(wn%2===0?"red-number":"green-number"));if(activeBet&&d.roundId!==lastProcessedRoundId){lastProcessedRoundId=d.roundId;let w=false;if(activeBet.betType==="COLOR"&&activeBet.betValue===d.lastWinningColor)w=true;else if(activeBet.betType==="NUMBER"&&parseInt(activeBet.betValue)===d.lastWinningNumber)w=true;if(w){playWinSound();showOutcomePopup(true,"YOU WON!",`Winning: ${d.lastWinningColor}, Number: ${d.lastWinningNumber}`);}else{playLoseSound();showOutcomePopup(false,"YOU LOST",`Winning: ${d.lastWinningColor}, Number ${d.lastWinningNumber}`);}activeBet=null;}}if(currentUser)fetchBalance();}catch(e){}},1000);
 
-        <div class="section-head"><div><span class="section-kicker">LIVE ROUND</span><h2>Choose your pick</h2></div><div class="timer-chip"><span id="countdown">--</span>s</div></div>
-        <div class="game-card">
-          <div class="round-title"><span>Current Round</span><span class="live-dot">● LIVE</span></div>
-          <div class="choice-label">Select Color <span>2×</span></div>
-          <div class="color-grid">
-            <button class="color-choice green" onclick="setChoice('COLOR','GREEN')">Green</button>
-            <button class="color-choice red" onclick="setChoice('COLOR','RED')">Red</button>
-            <button class="color-choice violet" onclick="setChoice('COLOR','VIOLET')">Violet</button>
-          </div>
-          <div class="choice-label">Or select a number <span>9×</span></div>
-          <div class="number-grid">
-            <button class="num-btn n0" onclick="setChoice('NUMBER',0)">0</button><button class="num-btn n1" onclick="setChoice('NUMBER',1)">1</button>
-            <button class="num-btn n2" onclick="setChoice('NUMBER',2)">2</button><button class="num-btn n3" onclick="setChoice('NUMBER',3)">3</button>
-            <button class="num-btn n4" onclick="setChoice('NUMBER',4)">4</button><button class="num-btn n5" onclick="setChoice('NUMBER',5)">5</button>
-            <button class="num-btn n6" onclick="setChoice('NUMBER',6)">6</button><button class="num-btn n7" onclick="setChoice('NUMBER',7)">7</button>
-            <button class="num-btn n8" onclick="setChoice('NUMBER',8)">8</button><button class="num-btn n9" onclick="setChoice('NUMBER',9)">9</button>
-          </div>
-          <div class="input-group amount-group"><label>Enter Amount (₹)</label><input id="bet-amount" min="10" step="10" type="number" value="10"></div>
-          <div id="selected-info" class="selected">Selected: None</div>
-          <button class="primary-btn wide" onclick="placeBet()">PLACE BET</button>
-          <p id="msg" class="message"></p>
-        </div>
+let transactionHistory=[],historyFilter='all';
+function formatHistoryDate(v){try{return new Date(v).toLocaleString('en-IN',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});}catch(e){return v||'';}}
+function showHistory(f,el){historyFilter=f;document.querySelectorAll('.history-tab').forEach(b=>b.classList.remove('active'));if(el)el.classList.add('active');renderHistory();}
+function renderHistory(){const b=document.getElementById('history-list');if(!b)return;const r=transactionHistory.filter(x=>historyFilter==='all'||x.type===historyFilter).sort((a,b)=>new Date(b.created_at)-new Date(a.created_at));if(!r.length){b.innerHTML='<div class="history-empty">🧾<br><b>No transactions yet</b></div>';return;}b.innerHTML=r.map(x=>{const d=x.type==='deposit',st=String(x.status||'').toLowerCase();return `<div class="history-card"><div class="history-left"><div class="history-icon">${d?'＋':'↗'}</div><div><div class="history-title">${d?'Add Money':'Withdrawal'}</div><div class="history-date">${formatHistoryDate(x.created_at)}${d&&x.utr_number?' · UTR '+x.utr_number:''}</div></div></div><div class="history-right"><div class="history-amount">${d?'+':'−'}₹${Number(x.amount).toFixed(2)}</div><div class="status ${st}">${x.status||'PENDING'}</div></div></div>`;}).join('');}
+async function loadTransactionHistory(){if(!currentUser)return;try{const[d,w]=await Promise.all([fetch(`${BACKEND_URL}/api/user/${encodeURIComponent(currentUser.mobile)}/deposits`),fetch(`${BACKEND_URL}/api/user/${encodeURIComponent(currentUser.mobile)}/withdrawals`)]);const dd=await d.json(),ww=await w.json();transactionHistory=[...(dd.deposits||[]).map(x=>({...x,type:'deposit'})),...(ww.withdrawals||[]).map(x=>({...x,type:'withdrawal'}))];renderHistory();}catch(e){const b=document.getElementById('history-list');if(b)b.innerHTML='<div class="history-empty">History load नहीं हुई।</div>';}}
+async function fetchBalance(){if(!currentUser)return;try{const r=await fetch(`${BACKEND_URL}/api/user/${currentUser.mobile}`);const d=await r.json();if(d.success){document.getElementById("balance").innerText=d.balance;userIsVip=!!d.isVip;applyVipUI(d.isVip);}}catch(e){}}
+function applyVipUI(isVip){const vb=document.getElementById('vip-banner'),hb=document.getElementById('home-vip-banner');if(vb)vb.style.display=isVip?'none':'flex';if(hb)hb.style.display=isVip?'none':'block';}
 
-        <div class="result-card">
-          <div class="section-kicker">RESULT</div>
-          <h3>Latest Round</h3>
-          <div class="result-row"><span>Winning Color</span><b class="res-badge" id="res-color">--</b></div>
-          <div class="result-row"><span>Winning Number</span><b id="res-number" class="winning-number">--</b></div>
-        </div>
-      </section>
+async function placeBet(){if(!currentUser)return alert("Please login first!");if(!userIsVip){alert("🔒 Betting के लिए पहले Add Money करें (कम से कम ₹100)!\n\nDeposit approve होते ही VIP मिल जाएगा।");openAddMoneyPage();return;}if(currentRoundStatus!=='OPEN')return alert("⏳ Betting बंद है।");const a=parseInt(document.getElementById("bet-amount").value);if(!currentBetType||currentBetValue===null)return alert("पहले Color या Number select करें!");if(!a||a<10)return alert("Minimum Bet ₹10!");if(a>500)return alert("Maximum Bet ₹500!");try{const sr=await fetch(`${BACKEND_URL}/api/game-status`);const sd=await sr.json();const r=await fetch(`${BACKEND_URL}/api/place-bet`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({userId:currentUser.mobile,betType:currentBetType,betValue:currentBetValue,amount:a})});const d=await r.json();document.getElementById("msg").innerText=d.message;if(d.success){playBetPlaced();activeBet={betType:currentBetType,betValue:currentBetValue,amount:a};lastProcessedRoundId=sd.roundId;showOutcomePopup(true,"BET PLACED!",`₹${a} का bet लग गया।`);document.querySelectorAll('.color-choice,.num-btn').forEach(b=>b.classList.remove('selected'));currentBetType=null;currentBetValue=null;document.getElementById('selected-info').innerText='Selected: None';}fetchBalance();}catch(e){document.getElementById("msg").innerText="Bet failed!";}}
 
-      <section id="wallet-page" class="page">
-        <div class="page-title"><span class="section-kicker">MY WALLET</span><h1>Wallet</h1><p>Manage your balance and requests.</p></div>
-        <div class="wallet-card large"><span>Current Balance</span><div class="balance">₹<span id="wallet-balance-copy">0</span></div>
-          <div class="wallet-actions"><button class="wallet-btn add" onclick="openModal('deposit-modal')">＋ Deposit</button><button class="wallet-btn withdraw" onclick="openModal('withdraw-modal')">↗ Withdraw</button></div>
-        <button class="primary-btn wide" onclick="openSupport()">💬 Customer Support</button>
-        </div>
-        <div class="info-list"><div><span>Account</span><strong id="wallet-user">--</strong></div><div><span>Mobile</span><strong id="wallet-mobile">--</strong></div></div>
-      </section>
+let avPolling=null,avBetActive=false,avCurrentRound=0,avLastBet=0,avState=null,_prevAviatorStatus=null,_prevMultiplier=0;
+function handleAviatorClick(){if(!currentUser)return alert("पहले login करें!");if(!userIsVip){alert("🔒 Aviator खेलने के लिए पहले Add Money करें!\n\nकम से कम ₹100 deposit करें।");openAddMoneyPage();return;}openAviatorGame();}
+function openAviatorGame(){if(!currentUser)return alert("Login!");showPage('aviator-page',null);startAviatorPolling();}
+function exitAviatorGame(){stopAviatorPolling();showPage('home-page',document.querySelector('.nav-item'));fetchBalance();}
+function setAvBet(v){document.getElementById('av-bet-input').value=v;}
+function startAviatorPolling(){if(avPolling)return;avPolling=setInterval(aviatorTick,250);aviatorTick();}
+function stopAviatorPolling(){if(avPolling){clearInterval(avPolling);avPolling=null;}}
+async function aviatorTick(){try{const r=await fetch(`${BACKEND_URL}/api/aviator/state`);const d=await r.json();if(!d.success)return;avState=d;renderAviatorUI(d);drawAviatorCanvas(d);}catch(e){}}
+function renderAviatorUI(s){const me=document.getElementById('av-multiplier-text'),bg=document.getElementById('av-status-badge'),re=document.getElementById('av-round-id'),bt=document.getElementById('av-action-btn'),mg=document.getElementById('av-msg');if(re)re.innerText=s.roundId;const be=document.getElementById('aviator-balance');if(be)be.innerText=document.getElementById('balance')?.innerText||'0';if(s.roundId!==avCurrentRound){avCurrentRound=s.roundId;avBetActive=false;if(mg)mg.innerText='';}
+const ps=_prevAviatorStatus,cs=s.status;if(ps==='WAITING'&&cs==='FLYING')playAviatorTakeoff();if(ps==='FLYING'&&cs==='CRASHED')playAviatorCrash();if(cs==='FLYING'&&s.multiplier>_prevMultiplier)playAviatorTick(s.multiplier);_prevAviatorStatus=cs;_prevMultiplier=cs==='FLYING'?s.multiplier:0;
+const st=document.getElementById('av-history-strip');if(st&&s.history){st.innerHTML=s.history.slice(0,15).map(h=>{const cp=Number(h.crashPoint);let cl=cp>=10?'high':(cp>=2?'mid':'');return `<div class="av-hist-chip ${cl}">${cp.toFixed(2)}x</div>`;}).join('')||'<div class="av-hist-chip">-- x</div>';}
+if(s.status==='WAITING'){me.className='waiting';me.innerText=`Starting in ${s.timeLeft}s...`;bg.innerText='WAITING';bt.className='av-action-btn bet';bt.disabled=false;bt.innerText='PLACE BET';bt.onclick=aviatorAction;}
+else if(s.status==='FLYING'){me.className='';me.innerText=s.multiplier.toFixed(2)+'x';bg.innerText='FLYING';if(avBetActive){bt.className='av-action-btn cashout';bt.disabled=false;bt.innerText=`💰 CASH OUT (₹${Math.floor(avLastBet*s.multiplier)})`;bt.onclick=aviatorAction;}else{bt.className='av-action-btn waiting';bt.disabled=true;bt.innerText='WAIT FOR NEXT ROUND';}}
+else if(s.status==='CRASHED'){me.className='crashed';me.innerText=s.crashPoint.toFixed(2)+'x';bg.innerText='CRASHED';bt.className='av-action-btn waiting';bt.disabled=true;bt.innerText=avBetActive?'❌ LOST — Next round...':`FLEW at ${s.crashPoint.toFixed(2)}x`;avBetActive=false;}}
+async function aviatorAction(){if(!currentUser)return alert("Login!");if(!userIsVip)return alert("🔒 VIP ज़रूरी!");if(!avState)return;if(avState.status==='WAITING'){const a=Number(document.getElementById('av-bet-input').value);if(!a||a<10||a>500)return alert("Bet ₹10-₹500!");const r=await fetch(`${BACKEND_URL}/api/aviator/bet`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({userId:currentUser.mobile,amount:a})});const d=await r.json();document.getElementById('av-msg').innerText=d.message;if(d.success){avBetActive=true;avLastBet=a;fetchBalance();playBetPlaced();}}else if(avState.status==='FLYING'&&avBetActive){const r=await fetch(`${BACKEND_URL}/api/aviator/cashout`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({userId:currentUser.mobile})});const d=await r.json();document.getElementById('av-msg').innerText=d.message;if(d.success){playAviatorCashout();showOutcomePopup(true,"💰 CASHED OUT!",`${d.multiplier.toFixed(2)}x! +₹${d.winAmount}`);avBetActive=false;fetchBalance();}}}
+function drawAviatorCanvas(s){const c=document.getElementById('aviator-canvas');if(!c)return;const x=c.getContext('2d');const r=c.getBoundingClientRect();const dpr=window.devicePixelRatio||1;c.width=r.width*dpr;c.height=r.height*dpr;x.setTransform(dpr,0,0,dpr,0,0);const W=r.width,H=r.height;x.clearRect(0,0,W,H);x.strokeStyle='rgba(255,255,255,.03)';for(let i=1;i<6;i++){x.beginPath();x.moveTo(0,(H/6)*i);x.lineTo(W,(H/6)*i);x.stroke();}if(s.status==='WAITING'){x.fillStyle='#8b8e9a';x.font='36px Arial';x.textAlign='center';x.fillText('✈',W/2,H-40);return;}const cp=s.status==='CRASHED'?s.crashPoint:s.multiplier;const p=Math.min(1,Math.log(cp)/Math.log(10));const sx=30,sy=H-30;const ex=sx+(W-60)*p;const ey=sy-(H-80)*p;const mx=sx+(ex-sx)*0.5;const my=sy-(sy-ey)*0.15;x.beginPath();x.moveTo(sx,sy);x.quadraticCurveTo(mx,my+(sy-ey)*0.4,ex,ey);x.lineTo(ex,sy);x.closePath();const g=x.createLinearGradient(0,sy,0,ey);g.addColorStop(0,'rgba(255,65,108,.5)');g.addColorStop(1,'rgba(255,65,108,.05)');x.fillStyle=g;x.fill();x.beginPath();x.moveTo(sx,sy);x.quadraticCurveTo(mx,my+(sy-ey)*0.4,ex,ey);x.strokeStyle=s.status==='CRASHED'?'#ff416c':'#ff704d';x.lineWidth=3;x.lineCap='round';x.stroke();x.beginPath();x.arc(ex,ey,12,0,Math.PI*2);x.fillStyle=s.status==='CRASHED'?'#ff416c':'#ff704d';x.fill();x.shadowColor=s.status==='CRASHED'?'#ff416c':'#ff704d';x.shadowBlur=20;x.shadowBlur=0;x.fillStyle='#fff';x.font='bold 14px Arial';x.textAlign='center';x.textBaseline='middle';x.fillText('✈',ex,ey);}
 
-      <section id="activity-page" class="page">
-        <div class="page-title"><span class="section-kicker">ACCOUNT</span><h1>Activity</h1><p>Your account activity area.</p></div>
-        <div class="history-tabs"><button class="history-tab active" onclick="showHistory('all',this)">All</button><button class="history-tab" onclick="showHistory('deposit',this)">Add Money</button><button class="history-tab" onclick="showHistory('withdrawal',this)">Withdrawals</button></div><div id="history-list" class="history-list"><div class="empty-card"><div>🧾</div><h3>Loading history...</h3><p>Your transactions will appear here.</p></div></div>
-      </section>
+async function updateWagerUI(){if(!currentUser)return;try{const r=await fetch(`${BACKEND_URL}/api/user/${currentUser.mobile}`);const d=await r.json();if(!d.success)return;const rq=Number(d.wagerRequired||0),cp=Number(d.wagerCompleted||0),pd=Number(d.wagerPending||0),cw=d.canWithdraw;const f=document.getElementById('wager-fill'),st=document.getElementById('wager-status-text'),ce=document.getElementById('wager-completed'),re=document.getElementById('wager-required'),ab=document.getElementById('wager-alert'),at=document.getElementById('wager-alert-text'),ai=document.querySelector('.wager-alert-icon');if(ce)ce.innerText=cp.toFixed(0);if(re)re.innerText=rq.toFixed(0);const p=rq>0?Math.min(100,(cp/rq)*100):100;if(f){f.style.width=p+'%';f.classList.toggle('complete',cw);}if(st){st.innerText=cw?'✅ Eligible':`${p.toFixed(0)}% Complete`;st.style.color=cw?'#1e7a44':'#d98200';}if(ab&&at&&ai){if(cw){ab.classList.add('ok');ai.innerText='✅';at.innerText='बधाई हो! अब आप withdrawal कर सकते हैं।';}else{ab.classList.remove('ok');ai.innerText='⚠️';at.innerText=`Withdrawal से पहले ₹${pd.toFixed(0)} का और bet लगाएँ।`;}}}catch(e){}}
+setInterval(()=>{if(document.getElementById('wallet-page')?.classList.contains('active-page'))updateWagerUI();},3000);
 
-      <section id="profile-page" class="page">
-        <div class="page-title"><span class="section-kicker">ACCOUNT</span><h1>Profile</h1><p>Your account details.</p></div>
-        <div class="profile-card"><div class="profile-avatar">CX</div><h2 id="profile-name">--</h2><p id="profile-mobile">--</p><button class="secondary-btn wide" onclick="localStorage.removeItem('gameUser'); location.reload()">LOG OUT</button></div>
-      </section>
-    </main>
+let amScreenshotData=null;
+function handleScreenshotSelect(e){const f=e.target.files[0];if(!f||!f.type.startsWith('image/'))return alert("सिर्फ image!");if(f.size>5*1024*1024){alert("5MB से छोटा!");e.target.value='';return;}const rd=new FileReader();rd.onload=(ev)=>{compressImage(ev.target.result,800,0.7,(c)=>{amScreenshotData=c;document.getElementById('screenshot-preview').innerHTML=`<img src="${c}" alt="Screenshot">`;document.getElementById('screenshot-box').classList.add('has-image');document.getElementById('clear-screenshot-btn').style.display='inline-block';});};rd.readAsDataURL(f);}
+function clearScreenshot(){amScreenshotData=null;document.getElementById('am-screenshot').value='';document.getElementById('screenshot-preview').innerHTML='<span style="font-size:28px;">📤</span><span style="font-size:11px;color:#8b8e9a;font-weight:700;">Screenshot choose करें</span><span style="font-size:10px;color:#a3a5b0;">Payment हो जाने के बाद</span>';document.getElementById('screenshot-box').classList.remove('has-image');document.getElementById('clear-screenshot-btn').style.display='none';}
+function compressImage(d,mw,q,cb){const i=new Image();i.onload=()=>{const c=document.createElement('canvas');let w=i.width,h=i.height;if(w>mw){h=(mw/w)*h;w=mw;}c.width=w;c.height=h;c.getContext('2d').drawImage(i,0,0,w,h);cb(c.toDataURL('image/jpeg',q));};i.src=d;}
 
-    <nav class="bottom-nav">
-      <button class="nav-item active" data-page="home-page" onclick="showPage('home-page',this)"><span>⌂</span><small>Home</small></button>
-      <button class="nav-item" data-page="wallet-page" onclick="showPage('wallet-page',this)"><span>◈</span><small>Wallet</small></button>
-      <button class="nav-item play" data-page="home-page" onclick="showPage('home-page',this)"><span>▶</span><small>Play</small></button>
-      <button class="nav-item" data-page="activity-page" onclick="showPage('activity-page',this)"><span>▣</span><small>Activity</small></button>
-      <button class="nav-item" onclick="openSupport()"><span>💬</span><small>Support</small></button>
-      <button class="nav-item" data-page="profile-page" onclick="showPage('profile-page',this)"><span>●</span><small>Profile</small></button>
-    </nav>
-  </div>
+const UPI_ID="comparex@axl",UPI_NAME="Compare_X";
+function openAddMoneyPage(){if(!currentUser)return alert("पहले login करें!");showPage('add-money-page',null);}
+function setAmAmount(v){document.getElementById('am-page-amount').value=v;}
+function payWithApp(app){const a=Number(document.getElementById('am-page-amount').value);if(!a||a<100){alert("Minimum ₹100!");document.getElementById('am-page-amount').focus();return;}const p=`pa=${encodeURIComponent(UPI_ID)}&pn=${encodeURIComponent(UPI_NAME)}&am=${a}&cu=INR&tn=AddMoney`;const l={phonepe:`phonepe://pay?${p}`,gpay:`tez://upi/pay?${p}`,paytm:`paytmmp://pay?${p}`,bhim:`bhim://pay?${p}`,amazon:`amazonpay://pay?${p}`,any:`upi://pay?${p}`};window.__pendingAmount=a;try{window.location.href=l[app]||l.any;}catch(e){window.location.href=l.any;}setTimeout(()=>{const u=document.getElementById('am-utr');if(u&&!u.value){u.focus();u.scrollIntoView({behavior:'smooth',block:'center'});}},3000);}
+function copyUPI(){const id=document.getElementById('am-upi-id').innerText;if(navigator.clipboard)navigator.clipboard.writeText(id).then(()=>alert("✅ Copied: "+id));else{const t=document.createElement('textarea');t.value=id;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);alert("✅ Copied");}}
+async function submitDepositFromPage(e){if(!currentUser)return alert("Please login first!");const a=document.getElementById('am-page-amount').value,u=document.getElementById('am-utr').value;if(!a||Number(a)<100)return alert("Minimum ₹100!");if(!u||u.trim().length<10)return alert("UTR कम से कम 10 अक्षर!");if(!/^[A-Za-z0-9]{10,22}$/.test(u.trim()))return alert("UTR में सिर्फ अक्षर और अंक!");if(!amScreenshotData)return alert("📸 Screenshot ज़रूरी!");const b=e?.target;if(b){b.disabled=true;b.innerText='⏳ SUBMITTING...';}try{const r=await fetch(`${BACKEND_URL}/api/add-money`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({userId:currentUser.mobile,amount:Number(a),utrNumber:u.trim(),screenshot:amScreenshotData})});const d=await r.json();alert(d.message);if(d.success){document.getElementById('am-utr').value='';document.getElementById('am-page-amount').value=500;clearScreenshot();showPage('wallet-page',null);fetchBalance();loadTransactionHistory();}}catch(e){alert("Deposit submit नहीं हो सका!");}finally{if(b){b.disabled=false;b.innerText='SUBMIT DEPOSIT REQUEST';}}}
 
-  <script src="config.js"></script>
-  <script>
-    function showPage(id, el) {
-      document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page'));
-      const page = document.getElementById(id);
-      if (page) page.classList.add('active-page');
-      document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-      if (el) el.classList.add('active');
-      if (id === 'wallet-page' && document.getElementById('wallet-balance-copy')) document.getElementById('wallet-balance-copy').innerText = document.getElementById('balance').innerText;
-      if (id === 'profile-page' && window.currentUser) {
-        document.getElementById('profile-name').innerText = window.currentUser.name || '--';
-        document.getElementById('profile-mobile').innerText = window.currentUser.mobile || '--';
-      }
-      if (id === 'activity-page') loadTransactionHistory();
-      window.scrollTo({top:0, behavior:'smooth'});
-    }
-    const _oldLoad = window.onload;
-  </script>
-  <script>
-
-    const BACKEND_URL = (window.GAME_API_URL || "").replace(/\/$/, "");
-
-    let currentUser = JSON.parse(localStorage.getItem("gameUser")) || null;
-    let isRegisterMode = false;
-    let currentBetType = null;
-    let currentBetValue = null;
-    
-    let activeBet = null; 
-    let lastProcessedRoundId = null;
-
-    // Sound Effects & BGM Setup using Web Audio API synthesis for guaranteed playback without external asset load failures
-    function playWinSound() {
-        try {
-            const ctx = new (window.AudioContext || window.webkitAudioContext)();
-            const osc = ctx.createOscillator();
-            const gain = ctx.createGain();
-            osc.type = 'triangle';
-            osc.frequency.setValueAtTime(440, ctx.currentTime);
-            osc.frequency.exponentialRampToValueAtTime(880, ctx.currentTime + 0.3);
-            gain.gain.setValueAtTime(0.2, ctx.currentTime);
-            gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.5);
-            osc.connect(gain);
-            gain.connect(ctx.destination);
-            osc.start();
-            osc.stop(ctx.currentTime + 0.5);
-        } catch(e) {}
-    }
-
-    function playLoseSound() {
-        try {
-            const ctx = new (window.AudioContext || window.webkitAudioContext)();
-            const osc = ctx.createOscillator();
-            const gain = ctx.createGain();
-            osc.type = 'sawtooth';
-            osc.frequency.setValueAtTime(300, ctx.currentTime);
-            osc.frequency.exponentialRampToValueAtTime(120, ctx.currentTime + 0.4);
-            gain.gain.setValueAtTime(0.2, ctx.currentTime);
-            gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.5);
-            osc.connect(gain);
-            gain.connect(ctx.destination);
-            osc.start();
-            osc.stop(ctx.currentTime + 0.5);
-        } catch(e) {}
-    }
-
-    let audioCtx = null;
-    let isMusicPlaying = false;
-    let musicInterval = null;
-
-    function toggleBGM() {
-        if (!isMusicPlaying) {
-            startBGM();
-        } else {
-            stopBGM();
-        }
-    }
-
-    function startBGM() {
-        if (isMusicPlaying) return;
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        isMusicPlaying = true;
-        document.getElementById("music-status").innerText = "🎵 BGM: Playing";
-        document.getElementById("music-btn").innerText = "Pause Music";
-
-        const notes = [261.63, 329.63, 392.00, 523.25]; // C E G C
-        let index = 0;
-
-        function playTone() {
-            if (!isMusicPlaying || !audioCtx) return;
-            try {
-                const osc = audioCtx.createOscillator();
-                const gain = audioCtx.createGain();
-
-                osc.type = 'triangle';
-                osc.frequency.setValueAtTime(notes[index], audioCtx.currentTime);
-
-                gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
-                gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.4);
-
-                osc.connect(gain);
-                gain.connect(audioCtx.destination);
-
-                osc.start();
-                osc.stop(audioCtx.currentTime + 0.4);
-
-                index = (index + 1) % notes.length;
-            } catch (e) {}
-        }
-
-        musicInterval = setInterval(playTone, 350);
-    }
-
-    function stopBGM() {
-        isMusicPlaying = false;
-        if (musicInterval) clearInterval(musicInterval);
-        if (audioCtx) audioCtx.close();
-        document.getElementById("music-status").innerText = "🎵 BGM: Paused";
-        document.getElementById("music-btn").innerText = "Play Music";
-    }
-
-    window.addEventListener('click', () => {
-        if (!isMusicPlaying) {
-            startBGM();
-        }
-    }, { once: true });
-
-    window.onload = () => {
-        if (currentUser) {
-            document.getElementById("auth-modal").style.display = "none";
-            loadUserData();
-        }
-    };
-
-    function toggleAuthMode() {
-        isRegisterMode = !isRegisterMode;
-        document.getElementById("auth-title").innerText = isRegisterMode ? "Register" : "Login";
-        document.getElementById("name-group").style.display = isRegisterMode ? "block" : "none";
-        document.getElementById("auth-toggle-msg").innerText = isRegisterMode ? "Already have an account?" : "Don't have an account?";
-        document.getElementById("auth-toggle-btn").innerText = isRegisterMode ? "Login" : "Register";
-    }
-
-    async function handleAuthSubmit() {
-        const mobile = document.getElementById("auth-mobile").value;
-        const password = document.getElementById("auth-password").value;
-        const name = document.getElementById("auth-name").value;
-        if (!mobile || !password) return alert("Mobile and password required!");
-        
-        const endpoint = isRegisterMode ? "/api/register" : "/api/login";
-        const payload = isRegisterMode ? { name, mobile, password } : { mobile, password };
-        
-        try {
-            const res = await fetch(`${BACKEND_URL}${endpoint}`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(payload)
-            });
-            const data = await res.json();
-            if (data.success) {
-                currentUser = data.user;
-                localStorage.setItem("gameUser", JSON.stringify(currentUser));
-                document.getElementById("auth-modal").style.display = "none";
-                loadUserData();
-                alert(data.message);
-            } else {
-                alert(data.message);
-            }
-        } catch(err) {
-            alert("Error connecting to server!");
-        }
-    }
-
-    function loadUserData() {
-        if(!currentUser) return;
-        document.getElementById("user-name").innerText = currentUser.name;
-        document.getElementById("user-id").innerText = currentUser.mobile;
-        fetchBalance();
-    }
-
-    function openModal(id) { document.getElementById(id).style.display = "flex"; }
-    function closeModal(id) { document.getElementById(id).style.display = "none"; }
-
-    function showOutcomePopup(isWin, title, text) {
-        const popup = document.getElementById("outcome-popup");
-        const popupIcon = document.getElementById("popup-icon");
-        const popupTitle = document.getElementById("popup-title");
-        const popupText = document.getElementById("popup-text");
-
-        if (isWin) {
-            popupIcon.innerText = "🎉";
-            popupTitle.innerText = title;
-            popupTitle.style.color = "#28a745";
-            playWinSound();
-        } else {
-            popupIcon.innerText = "❌";
-            popupTitle.innerText = title;
-            popupTitle.style.color = "#dc3545";
-            playLoseSound();
-        }
-        popupText.innerText = text;
-        popup.style.display = "flex";
-    }
-
-    function closeOutcomePopup() {
-        document.getElementById("outcome-popup").style.display = "none";
-    }
-
-    function payViaUPI() {
-        const amount = Number(document.getElementById("dep-amount").value);
-        if (!amount || amount < 100) return alert("Minimum Deposit is ₹100!");
-        const upiUrl = `upi://pay?pa=comparex@axl&pn=Compare%20X&am=${encodeURIComponent(amount)}&cu=INR`;
-        window.location.href = upiUrl;
-    }
-
-    async function submitDeposit() {
-        const amount = document.getElementById("dep-amount").value;
-        const utrNumber = document.getElementById("dep-utr").value;
-        if(!utrNumber) return alert("Please enter UTR Transaction Number!");
-        
-        try {
-            const res = await fetch(`${BACKEND_URL}/api/add-money`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ userId: currentUser.mobile, amount, utrNumber })
-            });
-            const data = await res.json();
-            alert(data.message);
-            if(data.success) {
-                closeModal('deposit-modal');
-                // Balance intentionally does NOT increase here. It changes only after admin approval.
-                fetchBalance();
-                loadTransactionHistory();
-            }
-        } catch(err) { alert("Deposit failed!"); }
-    }
-
-    async function submitWithdraw() {
-        const amount = document.getElementById("wd-amount").value;
-        const upiId = document.getElementById("wd-upi").value;
-        if(!upiId) return alert("Please enter your UPI ID!");
-        
-        try {
-            const res = await fetch(`${BACKEND_URL}/api/withdraw`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ userId: currentUser.mobile, amount, upiId })
-            });
-            const data = await res.json();
-            alert(data.message);
-            if(data.success) {
-                closeModal('withdraw-modal');
-                fetchBalance();
-                loadTransactionHistory();
-            }
-        } catch(err) { alert("Withdrawal request failed!"); }
-    }
-
-    function setChoice(type, value) {
-        currentBetType = type;
-        currentBetValue = value;
-        document.getElementById("selected-info").innerText = `Selected: ${type} -> ${value}`;
-    }
-
-    setInterval(async () => {
-        try {
-            const res = await fetch(`${BACKEND_URL}/api/game-status`);
-            const data = await res.json();
-             
-            document.getElementById("countdown").innerText = data.timeLeft;
-             
-            if (data.lastWinningColor && data.lastWinningNumber !== null) {
-                const colorBadge = document.getElementById("res-color");
-                colorBadge.innerText = data.lastWinningColor;
-                 
-                if (data.lastWinningColor === "GREEN") colorBadge.style.backgroundColor = "#28a745";
-                else if (data.lastWinningColor === "RED") colorBadge.style.backgroundColor = "#dc3545";
-                else if (data.lastWinningColor === "VIOLET") colorBadge.style.backgroundColor = "#6f42c1";
-                
-                const winningNumberEl = document.getElementById("res-number");
-                const winningNumber = Number(data.lastWinningNumber);
-                winningNumberEl.innerText = data.lastWinningNumber;
-                winningNumberEl.className = "winning-number " + ((winningNumber === 0 || winningNumber === 5) ? "violet-number" : (winningNumber % 2 === 0 ? "red-number" : "green-number"));
-
-                if (activeBet && data.roundId !== lastProcessedRoundId) {
-                    lastProcessedRoundId = data.roundId;
-
-                    let isWin = false;
-                    if (activeBet.betType === "COLOR" && activeBet.betValue === data.lastWinningColor) {
-                        isWin = true;
-                    } else if (activeBet.betType === "NUMBER" && parseInt(activeBet.betValue) === data.lastWinningNumber) {
-                        isWin = true;
-                    }
-
-                    if (isWin) {
-                        showOutcomePopup(true, "YOU WON!", `Congratulations! Winning Color: ${data.lastWinningColor}, Number: ${data.lastWinningNumber}`);
-                        document.getElementById("msg").innerHTML = "<span style='color:green; font-weight:bold;'>🎉 Congratulations! You Won the Bet!</span>";
-                    } else {
-                        showOutcomePopup(false, "YOU LOST", `Oops! Winning Color was ${data.lastWinningColor} and Number ${data.lastWinningNumber}. Try again!`);
-                        document.getElementById("msg").innerHTML = "<span style='color:red; font-weight:bold;'>❌ Oops! You Lost this round. Try Again!</span>";
-                    }
-
-                    activeBet = null;
-                }
-            }
-
-            if (currentUser) fetchBalance();
-        } catch (err) {}
-    }, 1000);
-
-
-    let transactionHistory = [];
-    let historyFilter = 'all';
-    function formatHistoryDate(v){try{return new Date(v).toLocaleString('en-IN',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});}catch(e){return v||'';}}
-    function showHistory(filter,el){historyFilter=filter;document.querySelectorAll('.history-tab').forEach(b=>b.classList.remove('active'));if(el)el.classList.add('active');renderHistory();}
-    function renderHistory(){const box=document.getElementById('history-list');if(!box)return;const rows=transactionHistory.filter(x=>historyFilter==='all'||x.type===historyFilter).sort((a,b)=>new Date(b.created_at)-new Date(a.created_at));if(!rows.length){box.innerHTML='<div class="history-empty">🧾<br><b>No transactions yet</b><br><small>Your Add Money and Withdrawal history will appear here.</small></div>';return;}box.innerHTML=rows.map(x=>{const d=x.type==='deposit',st=String(x.status||'').toLowerCase();return `<div class="history-card"><div class="history-left"><div class="history-icon">${d?'＋':'↗'}</div><div><div class="history-title">${d?'Add Money':'Withdrawal'}</div><div class="history-date">${formatHistoryDate(x.created_at)}${d&&x.utr_number?' · UTR '+x.utr_number:''}</div></div></div><div class="history-right"><div class="history-amount">${d?'+':'−'}₹${Number(x.amount).toFixed(2)}</div><div class="status ${st}">${x.status||'PENDING'}</div></div></div>`;}).join('');}
-    async function loadTransactionHistory(){if(!currentUser)return;try{const [d,w]=await Promise.all([fetch(`${BACKEND_URL}/api/user/${encodeURIComponent(currentUser.mobile)}/deposits`),fetch(`${BACKEND_URL}/api/user/${encodeURIComponent(currentUser.mobile)}/withdrawals`)]);const dd=await d.json(),ww=await w.json();transactionHistory=[...(dd.deposits||[]).map(x=>({...x,type:'deposit'})),...(ww.withdrawals||[]).map(x=>({...x,type:'withdrawal'}))];renderHistory();}catch(e){const box=document.getElementById('history-list');if(box)box.innerHTML='<div class="history-empty">History load nahi ho saki. Please try again.</div>';}}
-    async function fetchBalance() {
-        if (!currentUser) return;
-        try {
-            const res = await fetch(`${BACKEND_URL}/api/user/${currentUser.mobile}`);
-            const data = await res.json();
-            if(data.success) {
-                document.getElementById("balance").innerText = data.balance;
-            }
-        } catch(err) {}
-    }
-
-    async function placeBet() {
-        if (!currentUser) return alert("Please login first!");
-        const amount = parseInt(document.getElementById("bet-amount").value);
-         
-        if(!currentBetType || currentBetValue === null) {
-            alert("Pehle koi Color ya Number select karein!");
-            return;
-        }
-        if(!amount || amount < 10) {
-            alert("Minimum Bet Amount ₹10 honi chahiye!");
-            return;
-        }
-
-        try {
-            const statusRes = await fetch(`${BACKEND_URL}/api/game-status`);
-            const statusData = await statusRes.json();
-
-            const res = await fetch(`${BACKEND_URL}/api/place-bet`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ 
-                    userId: currentUser.mobile, 
-                    betType: currentBetType,
-                    betValue: currentBetValue, 
-                    amount: amount 
-                })
-            });
-            const data = await res.json();
-            document.getElementById("msg").innerText = data.message;
-            
-            if(data.success) {
-                activeBet = {
-                    betType: currentBetType,
-                    betValue: currentBetValue,
-                    amount: amount
-                };
-                lastProcessedRoundId = statusData.roundId;
-
-                // Show an immediate confirmation on the player's mobile screen.
-                const betLabel = currentBetType === "COLOR" ? currentBetValue : `Number ${currentBetValue}`;
-                showOutcomePopup(true, "BET PLACED!", `₹${amount} ka ${betLabel} bet successfully lag gaya hai.`);
-            }
-
-            fetchBalance();
-        } catch(err) {
-            document.getElementById("msg").innerText = "Bet place karne me error aaya!";
-        }
-    }
-
-  </script>
-  <script>
-    // Keep UI mirrors synchronized with the existing game logic.
-    window.setInterval(() => {
-      const b = document.getElementById('balance');
-      if (b) {
-        const v = b.innerText;
-        ['wallet-balance-copy'].forEach(id => { const el=document.getElementById(id); if(el) el.innerText=v; });
-      }
-      const n=document.getElementById('user-name')?.innerText || '--';
-      const m=document.getElementById('user-id')?.innerText || '--';
-      if(document.getElementById('wallet-user')) document.getElementById('wallet-user').innerText=n;
-      if(document.getElementById('wallet-mobile')) document.getElementById('wallet-mobile').innerText=m;
-      if(window.currentUser) {
-        document.getElementById('profile-name').innerText=window.currentUser.name||'--';
-        document.getElementById('profile-mobile').innerText=window.currentUser.mobile||'--';
-      }
-    }, 500);
-  
-    function openSupport(){
-      window.open('https://t.me/Co_X85','_blank','noopener,noreferrer');
-    }
+window.setInterval(()=>{const b=document.getElementById('balance');if(b){const v=b.innerText;['wallet-balance-copy','aviator-balance'].forEach(id=>{const el=document.getElementById(id);if(el)el.innerText=v;});}const n=document.getElementById('user-name')?.innerText||'--',m=document.getElementById('user-id')?.innerText||'--';if(document.getElementById('wallet-user'))document.getElementById('wallet-user').innerText=n;if(document.getElementById('wallet-mobile'))document.getElementById('wallet-mobile').innerText=m;if(window.currentUser){const pn=document.getElementById('profile-name'),pm=document.getElementById('profile-mobile');if(pn)pn.innerText=window.currentUser.name||'--';if(pm)pm.innerText=window.currentUser.mobile||'--';}},500);
+function openSupport(){window.open('https://t.me/Co_X85','_blank','noopener,noreferrer');}
 </script>
 </body>
 </html>
